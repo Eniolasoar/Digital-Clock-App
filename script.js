@@ -10,9 +10,10 @@ function delayNavigation(event) {
 
   setTimeout(function() {
     window.location.href = event.target.href; // Navigates to the target URL
-  }, 500); // Delay in milliseconds (2 seconds in this example)
+  }, 500);
 }
 
 document.querySelector("button").addEventListener('click',function(){
     textDisplay=document.querySelector(".text-container").classList.add("hide")
 })
+

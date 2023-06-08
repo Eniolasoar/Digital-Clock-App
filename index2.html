@@ -11,10 +11,40 @@
         <h2>DIGITAL CLOCK APP</h2>
         <div class="time">
             <div><span id="hour">00</span><span>Hours</span></div>
-            <div><span id="hour">00</span><span>Minutes</span></div>
-            <div><span id="hour">00</span><span>Seconds</span></div>
-            <div><span id="am">AM</span></div>
+            <div><span id="minutes">00</span><span>Minutes</span></div>
+            <div><span id="seconds">00</span><span>Seconds</span></div>
+            <div><span id="time">AM</span></div>
         </div>
+
+        <script>
+            function time(){
+  let hours=document.querySelector("#hour");
+  let minutes=document.querySelector("#minutes");
+  let seconds=document.querySelector("#seconds");
+  let time=document.querySelector("#time");
+
+  let setHour=new Date().getHours();
+  let setMinutes=new Date().getMinutes();
+  let setSeconds=new Date().getSeconds();
+  let setTime="AM";
+
+  if(setHour>12){
+    setHour-=12;
+    let setTime="PM";
+  }
+  //using ternary operator
+  setHour=(setHour<10)? "0" + setHour:setHour;
+  setMinutes=(setMinutes<10)? "0" +setMinutes:setMinutes;
+  setSeconds=(setSeconds<10)? "0" +setSeconds:setSeconds;
+
+  hours.innerHTML=setHour;
+  minutes.innerHTML=setMinutes;
+  seconds.innerHTML=setSeconds;
+  time.innerHTML=setTime;
+}
+
+var animations=setInterval(time,1000);
+        </script>
     </div>
 </body>
 </html>
