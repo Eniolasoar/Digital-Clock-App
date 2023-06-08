@@ -13,7 +13,7 @@ function delayNavigation(event) {
   }, 500);
 }
 
-document.querySelector("button").addEventListener('click',function(){
+document.querySelector("a").addEventListener('click',function(){
     textDisplay=document.querySelector(".text-container").classList.add("hide")
 })
 
