@@ -24,10 +24,45 @@ body
     letter-spacing: 0.4em;
 }
 .time{
-    position: relative;
+	position: relative;
     display: flex;
+	
+}
+#minutes,#seconds,#hour{
+	animation:bouncy 0.9s infinite;
 }
 
+#minutes{
+	animation-delay: 0.1s;
+}
+
+#hours{
+	animation-delay: 0.9s;
+	animation: bouncy-hours 2s infinite;
+}
+/* @keyframes bouncy-hour {
+	0%{
+		position: absolute;
+		left: 0;
+	}
+	50%{
+		left: 100px;
+	}
+	100%{
+		left: 200px;
+	}
+} */
+#seconds{
+	animation-duration: 0.75s;
+}
+@keyframes bouncy {
+	50%{
+		transform: translateY(50px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}	
 .clock .time div{
     margin: 0 5px;
     -webkit-box-reflect: below .5px linear-gradient(transparent,#0004);
@@ -51,6 +86,8 @@ body
 	box-shadow: 0 0 0 1px rgba(0,0,0,.2);
 
 }
+
+
 .clock .time div span:nth-child(2)
 {border-radius: 0px;
 	height: 30px;
