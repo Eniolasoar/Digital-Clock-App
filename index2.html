@@ -33,7 +33,10 @@
 
   if(setHour>12){
     setHour-=12;
-    let setTime="PM";
+    setTime="PM";
+  }
+  else{
+    setTime="AM";
   }
   //using ternary operator
   setHour=(setHour<10)? "0" + setHour:setHour;
