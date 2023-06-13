@@ -6,14 +6,16 @@ var typed=new Typed(".auto-type",{
 });
 
 function delayNavigation(event) {
-  event.preventDefault(); // Prevents the default navigation behavior
+  event.preventDefault();
 
-  setTimeout(function() {
+  setTimeout(
+    ()=>{
     window.location.href = event.target.href; // Navigates to the target URL
-  }, 500);
+    }, 
+  500);
 }
 
 document.querySelector("a").addEventListener('click',function(){
-    textDisplay=document.querySelector(".text-container").classList.add("hide")
+    document.querySelector(".text-container").classList.add("hide")
 })
 
