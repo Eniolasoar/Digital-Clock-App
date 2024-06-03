@@ -126,3 +126,16 @@ body
 #seconds{
 	color:green;
 }
+@media screen and (max-width: 500px){
+	.clock .time div:nth-last-child(1) span{
+		position: absolute;
+		top: 220px;
+		right: 20px;
+	}
+	.clock .time div:nth-last-child(1)span{
+		-webkit-box-reflect: none;
+	}
+	.clock .time div span{
+		width: 140px;
+	}
+}
