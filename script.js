@@ -1,6 +1,6 @@
 var typed=new Typed(".auto-type",{
-    strings:["WELCOME \nTO \nDIGITAL CLOCK APP"],
-    typeSpeed:150,
+    strings:["WELCOME \nTO \n YOUR \n PERSONAL \n DIGITAL CLOCK APP"],
+    typeSpeed:70,
     loop:true
 
 });
